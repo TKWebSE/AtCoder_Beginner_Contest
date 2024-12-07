@@ -7,30 +7,34 @@ public class Main {
       int N = sc.nextInt();
       int T = sc.nextInt();
 
-      int[] teamAnswerCount = new Int[N];
-      int[] teamAnswerTime = new Int[N];
+      // 配列に標準入力を設定する
+      int[] TeamAnswerCount = new Int[N];
+      int[] TeamAnswerTime = new Int[N];
       for(int i = 0;i < N;i++){
         TeamAnswerCount[i] = sc.nextInt();
         TeamAnswerTime[i] = sc.nextInt();
       }
 
       // 標準入力と1位の正解問題数と最終正解時刻を計算する
-      int 1stAnswerCount = 0;
-      int 1stAnswerTime = 0;
+      int KingAnswerCount = 0;
+      int KingAnswerTime = 0;
       for(int i = 0;i < N;i++){
         
-        if(1stAnswerCount < TeamAnswerCount){
-          if(1stAnswerCount = TeamAnswerCount[i] && 1stAnswerTime > TeamAnswerTime){
-            1stAnswerCount = TeamAnswerCount[i];
-            1stAnswerTime = TeamAnswerTime[i];
-          }
+        // 正解問題数が上回った時
+        if(KingAnswerCount < TeamAnswerCount[i]){
+          KingAnswerCount = TeamAnswerCount[i];
+          KingAnswerTime = TeamAnswerTime[i];
+          // 正解問題数が同一で、最終正解時刻が小さい時
+        }else if((KingAnswerCount == TeamAnswerCount[i]) && (KingAnswerTime > TeamAnswerTime[i])){ 
+          KingAnswerCount = TeamAnswerCount[i];
+          KingAnswerTime = TeamAnswerTime[i];
         }
-        }
+      }
       }
 
       // 答えを出す
       for(int i = 0;i < N;i++){
-        int G = T * (1stAnswerCount - TeamAnswerCount[i]) + (TeamAnswerTime - 1stAnswerTime);
+        int G = T * (KingAnswerCount - TeamAnswerCount[i]) + (TeamAnswerTime[i] - KingAnswerTime);
         System.out.println(G);
       }
 }
