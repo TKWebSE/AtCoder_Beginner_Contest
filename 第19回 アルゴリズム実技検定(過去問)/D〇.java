@@ -8,8 +8,8 @@ public class Main {
       int T = sc.nextInt();
 
       // 配列に標準入力を設定する
-      int[] TeamAnswerCount = new Int[N];
-      int[] TeamAnswerTime = new Int[N];
+      int[] TeamAnswerCount = new int[N];
+      int[] TeamAnswerTime = new int[N];
       for(int i = 0;i < N;i++){
         TeamAnswerCount[i] = sc.nextInt();
         TeamAnswerTime[i] = sc.nextInt();
@@ -30,7 +30,6 @@ public class Main {
           KingAnswerTime = TeamAnswerTime[i];
         }
       }
-      }
 
       // 答えを出す
       for(int i = 0;i < N;i++){
@@ -38,3 +37,5 @@ public class Main {
         System.out.println(G);
       }
 }
+}
+
