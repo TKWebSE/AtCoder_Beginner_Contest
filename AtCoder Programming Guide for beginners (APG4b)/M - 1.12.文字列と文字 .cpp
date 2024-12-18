@@ -7,4 +7,10 @@ int main() {
   cin >> S;
 
   // ここにプログラムを追記
+  char op;
+  char number;
+  
+  if(op == "+"){
+
+  }
 }
