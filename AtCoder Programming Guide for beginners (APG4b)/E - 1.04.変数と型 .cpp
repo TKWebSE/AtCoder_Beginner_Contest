@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// EX4 - ◯年は何秒？
 int main() {
   // 一年の秒数
   int seconds = 365 * 24 * 60 * 60;

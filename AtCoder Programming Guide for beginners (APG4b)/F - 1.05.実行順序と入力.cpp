@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int main()
-{
+ 
+ 	// EX5 - A足すB問題
+int main() {
   int a;
   int b;
   cin >> a >> b;
