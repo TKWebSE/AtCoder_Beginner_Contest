@@ -10,14 +10,21 @@ int main() {
   int answer = 0;
   int i = 1;
   int Size = S.size();
+  string op = "";
+
   while(Size < i){
-    if(S.at(i) == "+"){
+    op = S.at(i);
+    if(op == "+"){
       answer++;
     }
-    if(S.at(i) == "-"){
+    if(op == "-"){
       answer--;
     }
-    i =+ 2;
+    cout << answer << endl;
+    cout << op << endl;
+    cout << Size << endl;
+    cout << i << endl;
+    i = i+ 2;
   }
   cout << answer << endl;
 }
