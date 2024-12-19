@@ -7,16 +7,17 @@ int main() {
   cin >> S;
 
   // ここにプログラムを追記
-  char op;
-  char number;
-  
-  for(int i = 0; i > Ss.size;i++){
-    
-    if(op == "+"){
-
+  int answer = 0;
+  int i = 1;
+  int Size = S.size();
+  while(Size < i){
+    if(S.at(i) == "+"){
+      answer++;
     }
-    if(op == "-"){
-
+    if(S.at(i) == "-"){
+      answer--;
     }
+    i =+ 2;
   }
+  cout << answer << endl;
 }
