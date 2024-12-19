@@ -10,7 +10,13 @@ int main() {
   char op;
   char number;
   
-  if(op == "+"){
+  for(int i = 0; i > Ss.size;i++){
+    
+    if(op == "+"){
 
+    }
+    if(op == "-"){
+
+    }
   }
 }
