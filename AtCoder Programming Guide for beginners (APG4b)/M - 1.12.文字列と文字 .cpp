@@ -7,12 +7,12 @@ int main() {
   cin >> S;
 
   // ここにプログラムを追記
-  int answer = 0;
+  int answer = 1;
   int i = 1;
   int Size = S.size();
   string op = "";
 
-  while(Size < i){
+  while(Size > i){
     op = S.at(i);
     if(op == "+"){
       answer++;
@@ -20,10 +20,7 @@ int main() {
     if(op == "-"){
       answer--;
     }
-    cout << answer << endl;
-    cout << op << endl;
-    cout << Size << endl;
-    cout << i << endl;
+
     i = i+ 2;
   }
   cout << answer << endl;
