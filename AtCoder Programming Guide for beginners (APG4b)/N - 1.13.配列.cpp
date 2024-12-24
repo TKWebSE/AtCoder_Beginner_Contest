@@ -11,16 +11,17 @@ int main() {
   // 標準入力を受け取り、格納する
   for(int i = 0;i < N;i++){
     cin >> point.at(i);
-    average =+ point.at(i);
+    average += point.at(i);
   }
   
   // 平均点から何点離れてるかを計算する
   average = average / N;
   for(int i = 0;i < N;i++){
-    if(average < point.at(i)){
+    if(average <= point.at(i)){
       farPoint.at(i) = point.at(i) - average;
     }else{
-      farPoint.at(i) = point.at(i) + average;
+      farPoint.at(i) = average - point.at(i);
     }
+    cout << farPoint.at(i) << endl;
   }
 }
