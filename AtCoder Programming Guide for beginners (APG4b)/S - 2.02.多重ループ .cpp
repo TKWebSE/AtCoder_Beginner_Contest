@@ -18,7 +18,9 @@ int main() {
   int answer = 0;
   for(int i = 0;i < N;i++){
     for(int j = 0;j < N;j++){
-      
+      if(S == A.at(i) + P.at(j)){
+        answer++;
+      }
     }
   }
   cout << answer << endl;
