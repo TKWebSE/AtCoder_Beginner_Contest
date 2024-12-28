@@ -3,18 +3,20 @@ using namespace std;
 
 // EX19 - 九九の採点
 // 参照渡しを用いて、呼び出し側の変数の値を変更する
-void saiten(/* 呼び出し側に対応するように引数を書く */ &A,&correct_count,&wrong_count) {
+void saiten(/* 呼び出し側に対応するように引数を書く */ vector<vector<int>> &A,int &correct_count,int &wrong_count) {
   // 呼び出し側のAの各マスを正しい値に修正する
   // Aのうち、正しい値の書かれたマスの個数を correct_count に入れる
   // Aのうち、誤った値の書かれたマスの個数を wrong_count に入れる
   
   // ここにプログラムを追記
+  int answer = 0;
   for (int i = 0; i < 9; i++) {
     for (int j = 0; j < 9; j++) {
-      if(A.at(i).at(j) == i * j){
+      answer = (i+1) * (j+1);
+      if(A.at(i).at(j) == answer){
         correct_count++;
       }else{
-        A.at(i).at(j) = i * j; 
+        A.at(i).at(j) = answer; 
         wrong_count++;
       }
     }
