@@ -5,11 +5,13 @@ using namespace std;
 // childrenは組織の関係を表す2次元配列(参照渡し)
 int complete_time(vector<vector<int>> &children, int x) {
   // (ここに追記して再帰関数を実装する)
-  // if(x == 0){
-  //   return ;
-  // }
-return 0;
-  // return complete_time(children, x -1);
+  if(x == children.size();){
+    return ;
+  }
+  complete_time(children, x + 1)
+  children.at(children.at(x)) = 
+  children.at(x)
+  return ;
 }
 
 // これ以降の行は変更しなくてよい
@@ -36,5 +38,5 @@ int main() {
   // children={,,,,,}+
 
   // 0番の組織の元に報告書が揃う時刻を求める
-  // cout << complete_time(children, 0) << endl;
+  cout << complete_time(children, 0) << endl;
 }
