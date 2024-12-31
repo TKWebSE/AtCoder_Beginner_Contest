@@ -5,9 +5,11 @@ using namespace std;
 // childrenは組織の関係を表す2次元配列(参照渡し)
 int complete_time(vector<vector<int>> &children, int x) {
   // (ここに追記して再帰関数を実装する)
+  // ベースケース(組織の末端かどうかを判定する)
   if(x == children.size();){
     return ;
   }
+  // 再帰ステップ(親組織と自分の組織にインクリメントする)
   complete_time(children, x + 1)
   children.at(children.at(x)) = 
   children.at(x)
