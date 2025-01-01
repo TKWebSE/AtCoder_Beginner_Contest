@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// EX20 - 報告書の枚数
 // x番の組織について、子組織からの報告書が揃った時刻を返す
 // childrenは組織の関係を表す2次元配列(参照渡し)
 int complete_time(vector<vector<int>> &children, int x) {
