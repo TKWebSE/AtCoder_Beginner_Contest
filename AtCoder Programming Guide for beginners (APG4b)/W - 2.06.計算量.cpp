@@ -8,12 +8,14 @@ int complete_time(vector<vector<int>> &children, int x) {
   // (ここに追記して再帰関数を実装する)
   // ベースケース(組織の末端かどうかを判定する)
   if(x == children.size();){
-    return ;
+    return 0;
   }
   // 再帰ステップ(親組織と自分の組織にインクリメントする)
-  complete_time(children, x + 1)
-  children.at(children.at(x)) = 
-  children.at(x)
+  for(int c:children.at(x)){
+    int maisu = complete_time(children,c) + 1;
+    
+
+  }
   return ;
 }
 
@@ -28,7 +30,6 @@ int main() {
   for (int i = 1; i < N; i++) {
     cin >> p.at(i);
   }
-  //p={ -1,0,0,1,1,4}が入ってる
 
   // 組織の関係から2次元配列を作る(理解しなくてもよい)
   vector<vector<int>> children(N);  // ある組織の子組織の番号一覧  // N×0の二次元配列
@@ -37,8 +38,6 @@ int main() {
     children.at(parent).push_back(i);  // parentの子組織一覧にi番を追加
   }
   cout << children << endl;
-  // parent=0,0,1,1,4
-  // children={,,,,,}+
 
   // 0番の組織の元に報告書が揃う時刻を求める
   cout << complete_time(children, 0) << endl;
