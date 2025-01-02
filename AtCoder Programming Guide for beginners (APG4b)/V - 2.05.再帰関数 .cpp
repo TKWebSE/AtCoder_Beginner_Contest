@@ -2,21 +2,10 @@
 using namespace std;
 
 // EX20 - 報告書の枚数
-// x番の組織について、子組織からの報告書が揃った時刻を返す
+// x番の組織が親組織に提出する枚数を返す
 // childrenは組織の関係を表す2次元配列(参照渡し)
-int complete_time(vector<vector<int>> &children, int x) {
+int count_report_num(vector<vector<int>> &children, int x) {
   // (ここに追記して再帰関数を実装する)
-  // ベースケース(組織の末端かどうかを判定する)
-  if(x == children.size();){
-    return 1;
-  }
-  // 再帰ステップ(親組織と自分の組織にインクリメントする)
-  for(int c:children.at(x)){
-    int houkokusho = complete_time(children,c) + 1;
-    ;
-
-  }
-  return ;
 }
 
 // これ以降の行は変更しなくてよい
@@ -31,14 +20,15 @@ int main() {
     cin >> p.at(i);
   }
 
-  // 組織の関係から2次元配列を作る(理解しなくてもよい)
-  vector<vector<int>> children(N);  // ある組織の子組織の番号一覧  // N×0の二次元配列
+  // 組織の関係から2次元配列を作る
+  vector<vector<int>> children(N);  // ある組織の子組織の番号一覧
   for (int i = 1; i < N; i++) {
     int parent = p.at(i);  // i番の親組織の番号
     children.at(parent).push_back(i);  // parentの子組織一覧にi番を追加
   }
-  cout << children << endl;
 
-  // 0番の組織の元に報告書が揃う時刻を求める
-  cout << complete_time(children, 0) << endl;
+  // 各組織について、答えを出力
+  for (int i = 0; i < N; i++) {
+    cout << count_report_num(children, i) << endl;
+  }
 }
