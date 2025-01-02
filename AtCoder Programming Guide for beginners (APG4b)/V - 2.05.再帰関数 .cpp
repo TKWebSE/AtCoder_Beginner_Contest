@@ -6,6 +6,15 @@ using namespace std;
 // childrenは組織の関係を表す2次元配列(参照渡し)
 int count_report_num(vector<vector<int>> &children, int x) {
   // (ここに追記して再帰関数を実装する)
+  // ベースケース(子組織が存在するかを判定)
+  if(children.at(x) == x){
+    return 1;
+  }
+
+  // 再帰ステップ(子組織が存在しなくなるまで再帰して、報告書に加算する)
+  int houkokusho = count_report_num(children,x) + 1;
+
+  return houkokusho;
 }
 
 // これ以降の行は変更しなくてよい
