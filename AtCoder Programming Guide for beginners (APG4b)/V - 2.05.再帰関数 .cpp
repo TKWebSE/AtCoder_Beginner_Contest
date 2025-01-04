@@ -13,10 +13,9 @@ int count_report_num(vector<vector<int>> &children, int x) {
 
   // 再帰ステップ(子組織が存在しなくなるまで再帰して、報告書に加算する)
   int countHoukokusho = 0;//ロジックがおかしい一番最初のところからトレースする
-  countHoukokusho = countHoukokusho + count_report_num(children,x);//子組織の報告書を導く
   countHoukokusho++; //自組織文の報告書一枚加算
   for(int c:children:.at(x)){
-    
+    count_report_num(children,c);
   }
   return countHoukokusho;
 }
