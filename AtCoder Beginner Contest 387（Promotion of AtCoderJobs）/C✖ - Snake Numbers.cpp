@@ -23,7 +23,6 @@ void hebiHantei(vactor &keta,int ketasu,int &answer){
   // }
 }
 
-// EX1 - コードテストと出力の練習
 int main() {
   String L = 0;
   int R = 0;
@@ -39,11 +38,11 @@ int main() {
     // 配列を作る
     vector<int> S(LString.size());
     // 配列に文字を入れる
-    桁の残り数を求める
+    // 桁の残り数を求める
 
-    桁を数字で重み付けして、総和を出す
+    // 桁を数字で重み付けして、総和を出す
 
-    Lの一桁目をカウントアップする
+    // Lの一桁目をカウントアップする
   }
   
   answer = pow((A + B) ,2);

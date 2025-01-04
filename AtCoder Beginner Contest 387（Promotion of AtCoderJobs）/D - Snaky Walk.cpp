@@ -2,11 +2,11 @@
 using namespace std;
 
 int main() {
-  int A = 0;
-  int B = 0;
-  int answer = 0;
-  cin >> A >> B;
-
+  int H = 0;
+  int W = 0;
+  cin >> H >> M;
+  vector<vactor<String>> Glid(H,W);
+   
   answer = pow((A + B) ,2);
   cout << answer << endl;
 }
