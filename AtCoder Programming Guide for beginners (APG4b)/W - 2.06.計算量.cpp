@@ -2,10 +2,11 @@
 using namespace std;
 
 // EX21 - 計算量の見積もり
+// O(1)
 int f0(int N) {
   return 1;
 }
-
+// O(NM)
 int f1(int N, int M) {
   int s = 0;
   for (int i = 0; i < N; i++) {
@@ -17,6 +18,7 @@ int f1(int N, int M) {
   return s;
 }
 
+// O(N2)
 int f2(int N) {
   int s = 0;
   for (int i = 0; i < N; i++) {
@@ -31,7 +33,7 @@ int f2(int N) {
   return s;
 }
 
-
+// O(N2)
 int f3(int N) {
   int s = 0;
   for (int i = 0; i < 3; i++) {
@@ -42,6 +44,7 @@ int f3(int N) {
   return s;
 }
 
+// O(2N)
 int f4(int N) {
   int s = 0;
   for (int i = 0; i < N; i++) {
@@ -52,6 +55,7 @@ int f4(int N) {
   return s;
 }
 
+// O(N2M)
 int f5(int N, int M) {
   int s = 0;
   for (int i = 0; i < N; i++) {
@@ -73,7 +77,7 @@ int main() {
   a1 = f1(N, M);
   a2 = f2(N);
   a3 = f3(N);
-  a4 = f4(N);
+  // a4 = f4(N);
   a5 = f5(N, M);
 
   cout << "f0: " << a0 << endl;
