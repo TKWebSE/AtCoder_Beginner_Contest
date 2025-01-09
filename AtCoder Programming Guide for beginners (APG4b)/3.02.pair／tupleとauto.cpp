@@ -22,6 +22,6 @@ int main() {
   // 表示する
   for(auto p:data){
     tie(second,first) = p;
-    cout << left << " " << right << endl;
+    cout << first << " " << second << endl;
   }
 }
