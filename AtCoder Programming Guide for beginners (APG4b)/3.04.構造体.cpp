@@ -52,9 +52,25 @@ struct Clock{
       if(0 > diff_second){
         // 時刻をマイナスする
         second = second - diff_second % 60;
+        if(second < 0){
+          second = second + 60;
+          minute--;
+        }
         minute = minute - diff_second / 60;
+        if(minute < 0){
+          if(minute < -59){
+            minute < 
+          }
+          minute = minute  + 60;
+          hour--;
+        }
         hour = hour - diff_second / 360;
-     
+        if(hour < 0){
+          if(hour < -23){
+            hour = hour % 24;
+          }
+          hour = hour + 24;
+        }
       }else{
         // 時刻をプラスする
         hour = hour + diff_second / 360;
