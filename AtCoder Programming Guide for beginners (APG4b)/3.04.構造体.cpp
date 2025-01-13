@@ -48,12 +48,13 @@ struct Clock{
 //     diff_second の値は -86400 ~ 86400 の範囲を取とりうる
 
     void shift(int diff_second){
-      
+      // 繰り上がり繰り下がりロジックを追加する追加する
       if(0 > diff_second){
         // 時刻をマイナスする
-        hour = hour - diff_second / 360;
-        minute = minute - diff_second / 60;
         second = second - diff_second % 60;
+        minute = minute - diff_second / 60;
+        hour = hour - diff_second / 360;
+     
       }else{
         // 時刻をプラスする
         hour = hour + diff_second / 360;
