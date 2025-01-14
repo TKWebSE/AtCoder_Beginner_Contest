@@ -34,9 +34,28 @@ struct Clock{
 //     "HH:MM:SS"
 //     HH、MM、SSはそれぞれ時間、分、秒を2桁で表した文字列
     string to_str(){
-      cout << std::setw(2) << std::setfill('0') <<  hour << ":" 
-      << std::setw(2) << std::setfill('0') << minute <<  ":" 
-      << std::setw(2) << std::setfill('0') << second << std::endl;
+      string str = "";
+      // 時をゼロバディング
+      if(hour < 10){
+        str += "0"; 
+      }
+      str += to_string(hour);
+      str += ":";
+
+      // 分をゼロバディング
+      if(minute < 10){
+        str += "0"; 
+      }
+      str += to_string(minute);
+      str += ":";
+
+      // 秒をゼロバディング
+      if(second < 10){
+        str += "0"; 
+      }
+      str += to_string(second);
+      
+      return str;
     }
 
 // メンバ関数 shift の定義を書く
@@ -51,42 +70,34 @@ struct Clock{
 
     void shift(int diff_second){
       // diff_secondを時間、分、秒に分けるロジック
-      int p_second = diff_second % 60;
-      int p_minute = diff_second % 360 / 60;
-      int p_hour = diff_second / 360;
-      // 秒分時の順に足して言って繰り上げ繰り下げをするロジック
-      if(0 > diff_second){
-        // 時刻をマイナスする
-        second = second - p_second;
-        if(second < 0){
-          minute = minute - second / 60 - 1;
-          second = second + 60;
-        }
-        minute = minute - p_minute;
-        if(minute < 0){
-          hour = hour - minute / 60 - 1;
-          minute = minute + 60 ;
-        }
-        hour = hour - p_hour;
-        if(hour < 0){
-          hour = hour % 24 + 24;
-        }
-      }else{
-        // 時刻をプラスする
-            second = second + p_second;
-        if(second > 59){
-          minute = minute + second / 60 + 1;
-          second = second - 60;
-        }
-        minute = minute + p_minute;
-        if(minute > 59){
-          hour = hour + minute / 60 - 1;
-          minute = minute - 60 ;
-        }
-        hour = hour + p_hour;
-        if(hour > 23){
-          hour = hour % 24 - 24;
-        }
+      int diff_hour = diff_second / 3600;
+      diff_second %= 3600;
+      int diff_minute = diff_second / 60;
+      diff_second %= 60;
+
+      second += diff_second;
+      if(second >= 60){
+        minute++;
+        second-=60;
+      } else if(second < 0){
+        minute--;
+        second+=60;
+      } 
+
+      minute += diff_minute;
+      if(minute >= 60){
+        hour++;
+        minute-=60;
+      }else if(minute < 0){
+        hour--;
+        minute+=60;
+      }
+
+      hour += diff_hour;
+      if(hour >= 24){
+        hour-=24;
+      }else if(hour < 0){
+        hour+=24;
       }
     }
 };
@@ -106,7 +117,7 @@ int main() {
 
   // set関数を呼び出して時刻を設定する
   clock.set(hour, minute, second);
-
+  
   // 時刻を出力
   cout << clock.to_str() << endl;
 
