@@ -17,13 +17,15 @@ bitset<50> symmetric_diff(bitset<50> A, bitset<50> B) {
 }
 // Aから値xを除く
 bitset<50> subtract(bitset<50> A, int x) {
-  return A - x;
+  return A.set(x, 0);
 }
 // Aに含まれる要素に1を加える(ただし、要素49が含まれる場合は0になるものとする)
 bitset<50> increment(bitset<50> A) {
+  return ;
 }
 // Aに含まれる要素から1を引く(ただし、要素0が含まれる場合は49になるものとする)
 bitset<50> decrement(bitset<50> A) {
+  return ;
 }
 
 // Sに値xを加える
