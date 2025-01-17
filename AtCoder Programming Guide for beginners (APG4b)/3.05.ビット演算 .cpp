@@ -5,6 +5,7 @@ using namespace std;
 
 // AとBに共通して含まれる要素からなる集合を返す
 bitset<50> intersection(bitset<50> A, bitset<50> B) {
+  return A & B;
 }
 // AとBのうち少なくとも一方に含まれる要素からなる集合を返す
 bitset<50> union_set(bitset<50> A, bitset<50> B) {
