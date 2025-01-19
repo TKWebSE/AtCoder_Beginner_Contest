@@ -9,7 +9,6 @@ int main() {
 
   while(X != answer){
     answer = 1;
-    // cout << answer << endl;
     for(int i = 2;i <= 20;i++){
       answer = answer * i;
       // cout << i << endl;

@@ -8,7 +8,7 @@ int main() {
 
   // 命令を受け取る
   for(int i = 0;i < N;i++){
-    cin >> codes.at(i); 
+    cin >> codes.at(i);
   }
   // 計算する
 

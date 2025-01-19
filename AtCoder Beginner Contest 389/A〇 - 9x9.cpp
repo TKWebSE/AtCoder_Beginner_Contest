@@ -8,7 +8,6 @@ int main() {
   char B;
   char C;
   cin >> A >> B >> C;
-cout << A << B<< C << endl;
 
   int intA = int(A-'0');
   int intC = int(C-'0');
@@ -26,7 +25,7 @@ cout << A << B<< C << endl;
   if(B == '/'){
    answer = int(A-'0') / int(C-'0');
   }
-cout << intA << intC << endl;
+
   // 答えを出力する
   cout << answer << endl;
 }
