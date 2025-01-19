@@ -9,15 +9,14 @@ int main() {
 
   while(X != answer){
     answer = 1;
-    kaijo++;
     // cout << answer << endl;
-    for(int i = kaijo;i > 1;i--){
+    for(int i = 2;i <= 20;i++){
       answer = answer * i;
       // cout << i << endl;
       // cout << X << ":" <<answer << endl;
       // cout << "--------" << endl;
+      if(X = answer) cout i endl;
     }
   }
 
-  cout << kaijo << endl;
 }
