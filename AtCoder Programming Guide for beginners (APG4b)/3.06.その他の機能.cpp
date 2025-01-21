@@ -11,7 +11,7 @@ int main() {
     cin >> codes.at(i);
   }
   // 計算する
-
+  
   // 答えを出力する
   cout << "Hello, world!" << endl;
 }
