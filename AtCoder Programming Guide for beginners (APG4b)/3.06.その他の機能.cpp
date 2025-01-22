@@ -4,18 +4,19 @@ using namespace std;
 // EX26 - 電卓を作ろう3 
 
 // 整数の変数を宣言
-int declarationInt(int x){
-
+int declaration_int(int x){
+  cin >> 
 }
 
 // 整数の値を出力
-void printInt(int x){
-
+void print_int(int x){
+  cout << x << endl;
 }
 
 // 配列の変数を宣言
-void declarationVec(vector ){
-
+void declaration_vec(vector<int> vec){
+  cin >> 
+  
 }
 
 // 配列の値を出力
@@ -35,9 +36,26 @@ int main() {
 
   // 命令を受け取る
   for(int i = 0;i < N;i++){
-    cin >> codes.at(i);
+    cin >> x;
+    while(x == ";"){
+      if(x == "int"){
+        
+      }
+      if(x == "print_int"){
+
+      }
+      if(x == "vec"){
+
+      }
+      if(x == "print_vec"){
+
+      }
+
+      cin >> x;
+  }
   }
   // 計算する
+  
   
   // 答えを出力する
   cout << "Hello, world!" << endl;
