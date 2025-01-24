@@ -1,8 +1,22 @@
+// EX26 - 電卓を作ろう3 
+
 // 問題文の形式でvec値を出力
-void print_vec(vector<int> vec)
+void print_vec(vector<int> vec) {
+  cout << "[ ";
+  for (int i = 0; i < vec.size(); i++) {
+    cout << vec.at(i) << " ";
+  }
+  cout << "]" << endl;
+}
+
 
 // 変数名を読み取りイコールを読み飛ばす
-string read_name()
+string read_name(){
+  string equals;
+  string name;
+  cin >> name >> equals;
+  return name;
+}
 
 // int式の項を1つ読み取る。
 // 数字ならその値を返し、そうでないなら変数として解釈し変数の値を返す
