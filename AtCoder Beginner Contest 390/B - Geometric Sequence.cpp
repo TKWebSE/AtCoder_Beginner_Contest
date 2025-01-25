@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   int N =0;
   cin >> N;
-  vector<long> A(N);
+  vector<long long> A(N);
   bool answer = true;
 
   if(N <= 2){
@@ -17,7 +17,7 @@ int main() {
   }
   
   // チェックする
-  for(int i = 1;i < N;i++){
+  for(int i = 1;i < N-2;i++){
     if(A.at(i) * A.at(i+2) != A.at(i+1) * A.at(i+1)){
       answer = false;
     }
