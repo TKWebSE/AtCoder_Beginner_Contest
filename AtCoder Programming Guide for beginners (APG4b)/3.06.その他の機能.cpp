@@ -22,7 +22,14 @@ string read_name(){
 // 数字ならその値を返し、そうでないなら変数として解釈し変数の値を返す
 // var_int : intの変数を保持するmap
 int read_int(map<string, int> &var_int){
-  
+  char c;
+  cin >> c;
+if (isdigit(c)) {
+  return c;
+}
+else {
+  cout << "cは数字でない" << endl;
+}
 }
 
 // int式全体を読み取って計算する
@@ -35,7 +42,7 @@ int calc_int(map<string, int> &var_int){
 // 最初の"["は読み取ってある前提であることに注意
 // var_int : intの変数を保持するmap
 vector<int> read_vec_val(map<string, int> &var_int){
-  
+
 }
 
 // vec式の項を1つ読み取る
