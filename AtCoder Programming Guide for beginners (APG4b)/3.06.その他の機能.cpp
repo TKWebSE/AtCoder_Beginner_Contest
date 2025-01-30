@@ -28,7 +28,7 @@ if (isdigit(c)) {
   return c;
 }
 else {
-  return c;
+  return 変数を返す;
 }
 }
 
