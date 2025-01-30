@@ -28,7 +28,7 @@ if (isdigit(c)) {
   return c;
 }
 else {
-  cout << "cは数字でない" << endl;
+  return c;
 }
 }
 
@@ -49,12 +49,16 @@ vector<int> read_vec_val(map<string, int> &var_int){
 // vec値ならその値を返し、そうでないなら変数として解釈し変数の値を返す
 // var_int : intの変数を保持するmap
 // var_vec : vecの変数を保持するmap
-vector<int> read_vec(map<string, int> &var_int, map<string, vector<int>> &var_vec)
+vector<int> read_vec(map<string, int> &var_int, map<string, vector<int>> &var_vec){
+
+}
 
 // vec式全体を読み取って計算する
 // var_int : intの変数を保持するmap
 // var_vec : vecの変数を保持するmap
-vector<int> calc_vec(map<string, int> &var_int, map<string, vector<int>> &var_vec)
+vector<int> calc_vec(map<string, int> &var_int, map<string, vector<int>> &var_vec){
+  
+}
 
 
 int main() {
