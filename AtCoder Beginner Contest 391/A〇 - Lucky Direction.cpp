@@ -2,37 +2,35 @@
 using namespace std;
 
 int main() {
-  string answer ="";
-  string hougaku = "";
-  cin >> hougaku;
+  string answer ="No";
+  int a = 0;
+  int b = 0;
+  int c = 0;
+  cin >> a >> b >> c;
 
-  // 東西南北
-  if(hougaku == "N"){
-    answer = "S";
+  // a最初パターン
+  if(a * b == c){
+    answer ="Yes";
   }
-  if(hougaku == "E"){
-    answer = "W";
-  }
-  if(hougaku == "W"){
-    answer = "E";
-  }
-  if(hougaku == "S"){
-    answer = "N";
+  if(a * c ==b){
+    answer ="Yes";
   }
 
-  // ななめ
-  if(hougaku == "NE"){
-    answer = "SW";
+  // b最初パターン
+  if(b * a == c){
+    answer ="Yes";
   }
-  if(hougaku == "NW"){
-    answer = "SE";
-  }
-  if(hougaku == "SE"){
-    answer = "NW";
-  }
-  if(hougaku == "SW"){
-    answer = "NE";
+  if(b * c == a){
+    answer ="Yes";
   }
 
+  // c最初パターン
+  if(c * a == b){
+    answer ="Yes";
+  }
+  if(c* b == a){
+    answer ="Yes";
+  }
+  
   cout << answer << endl;
 }
