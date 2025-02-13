@@ -8,5 +8,8 @@ int main() {
   vector<int> A(N);
 
   for(auto& a:A)cin >> a;
+  
+
+  
   cout << ans << endl;
 }
