@@ -12,15 +12,16 @@ int main() {
   int size = S.size();
 
   for(int x = 0;x < size;x++){
-    
-    if(S[x] == "A"){
+    if(S[x] == 'A'){
       i = x;
-      for(int y = x+1;y < size;y++){
-        if(S[y] == "B"){
+      for(int y = x + 1;y < size;y++){
+        if(S[y] == 'B'){
           j = y;
           k = j - i + j;
-          if(S[k] == "C"){
-            answer++;
+          if(k < size){
+            if(S[k] == 'C'){
+              answer++;
+            }
           }
         }
       }
