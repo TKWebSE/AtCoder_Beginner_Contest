@@ -7,6 +7,7 @@ int main() {
   vector<string> S(N);
   
   for(auto s : S)cin >> s;
+  
 
 
   

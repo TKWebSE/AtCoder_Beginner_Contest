@@ -9,3 +9,4 @@ int main() {
 
   
 }
+https://atcoder.jp/contests/abc393/editorial/12242
