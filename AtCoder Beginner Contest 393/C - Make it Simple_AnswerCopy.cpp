@@ -27,5 +27,3 @@ int main() {
   cout << ans << endl;
   return 0;
 }
-
-https://atcoder.jp/contests/abc393/editorial/12242
