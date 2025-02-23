@@ -3,8 +3,18 @@ using namespace std;
 
 int main() {
   string s = "";
+  string ans = "";
   cin >> s;
+  int slength = s.size();
 
+  for(int i = 0;i < slength-1;i++){
+    string n = s.at(i) + s.at(i+1);
+    if(n == "WA"){
+      s.at(i) = "A";
+      s.at(i+1) = "C";
+      i = 0;
+    }
+  }
 
-  
+  cout << ans << endl;
 }
