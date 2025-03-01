@@ -17,7 +17,7 @@ int main() {
   }
   
   // チェックする
-  for(int i = 1;i < N-2;i++){
+  for(int i = 0;i < N-2;i++){
     if(A.at(i) * A.at(i+2) != A.at(i+1) * A.at(i+1)){
       answer = false;
     }
