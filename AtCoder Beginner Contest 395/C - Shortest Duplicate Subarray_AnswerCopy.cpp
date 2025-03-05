@@ -17,6 +17,7 @@ int main() {
   rep(l,n){
     while(r < n && mult == 0){
       cnt[a[r]]++;
+      if(cnt[a[r]] == 2) mult++;
       r++;
     }
     if(mult == 0) break;
