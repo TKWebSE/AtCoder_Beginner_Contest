@@ -4,8 +4,8 @@ using namespace std;
 
 int main() {
   string ans = "";
-  int N = 0;
-  cin >> N;
+  int n = 0;
+  cin >> n;
 
 
   cout << ans << endl;
