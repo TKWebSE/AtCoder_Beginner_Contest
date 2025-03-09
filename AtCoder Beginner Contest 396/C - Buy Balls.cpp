@@ -30,10 +30,10 @@ int main() {
     }
   }
   nowPrice = 0;
-  白の最大値とIndexを求める
+  // 白の最大値とIndexを求める
   rep(i,n){
-    whiteMax+= black[i];
-    if(blackMax <= nowPrice){
+    whiteMax+= white[i];
+    if(whiteMax <= nowPrice){
       whiteMax = nowPrice;
       whiteIndex =i;
     }else{
