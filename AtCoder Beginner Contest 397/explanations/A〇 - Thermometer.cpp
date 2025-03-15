@@ -4,17 +4,19 @@ using namespace std;
 
 int main() {
   int ans;
-  int x = 0;
+  double x = 0;
   cin >> x;
 
   if(x >= 38){
     ans = 1;
-  }else if(x >= 37.5){
+  }
+  if(x >= 37.5 && x < 38){
     ans = 2;
-  }else {
+  }
+  if(x < 37.5){
     ans = 3;
   }
-
+  
   cout << ans << endl;
   return 0;
 }
