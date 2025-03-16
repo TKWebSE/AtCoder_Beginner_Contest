@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "g++: Thermometer.cpp",
+      "type": "shell",
+      "command": "/usr/bin/g++",
+      "args": [
+        "AtCoder Beginner Contest 397/mySolutions/A〇 - Thermometer.cpp",  // ここでソースコードのパスを指定
+        "-o",
+        "a.out"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Generated task by VS Code"
+    },
+    {
+      "label": "Run Thermometer",
+      "type": "shell",
+      "command": "./a.out",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "detail": "Run the executable after building."
+    }
+  ]
+}
