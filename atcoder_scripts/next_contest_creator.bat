@@ -5,14 +5,18 @@ setlocal enabledelayedexpansion
 set BASE_DIR=D:\AtCoder_Beginner_Contest
 set SCRIPTS_DIR=D:\AtCoder_Beginner_Contest\atcoder_scripts
 
-:: URL.cpp の内容をもとに、最後のコンテスト番号を取得
-set LAST_URL=0
-for /f "tokens=1 delims=/" %%A in ('type "%BASE_DIR%\URL.cpp" ^| findstr /r "abc[0-9]"') do (
-    for /f "tokens=2 delims=c" %%B in ("%%A") do set LAST_URL=%%B
+:: AtCoder_Beginner_Contest 配下のフォルダを調べて、最大の番号を取得
+set LAST_CONTEST=0
+
+for /d %%D in ("%BASE_DIR%\*") do (
+    for /f "tokens=4" %%N in ("%%~nxD") do (
+        set /a "NUM=%%N"
+        if !NUM! gtr !LAST_CONTEST! set LAST_CONTEST=!NUM!
+    )
 )
 
 :: コンテスト番号をインクリメント
-set /a NEXT_CONTEST=%LAST_URL%+1
+set /a NEXT_CONTEST=LAST_CONTEST+1
 
 :: コンテストフォルダを作成
 set CONTEST_NAME=AtCoder Beginner Contest %NEXT_CONTEST%
@@ -28,7 +32,6 @@ set EDITORIAL_URL=https://atcoder.jp/contests/abc%NEXT_CONTEST%/editorial
 set URL_FILE=%CONTEST_DIR%\URL.cpp
 (
     echo // 解説:
-    echo.
     echo %EDITORIAL_URL%
     echo.
 ) > "%URL_FILE%"
