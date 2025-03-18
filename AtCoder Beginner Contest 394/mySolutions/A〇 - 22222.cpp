@@ -13,6 +13,5 @@ int main() {
       ans += "2";
     }
   }
-  
   cout << ans << endl;
 }
