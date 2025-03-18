@@ -1,3 +1,5 @@
+AtCoderBeginnerContest用のリポジトリ
+
 コンパイルしてコードテストをする
 .\abc_runner.bat
 
