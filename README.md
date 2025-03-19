@@ -1,6 +1,6 @@
 AtCoderBeginnerContest用のリポジトリ
 
-コンパイルしてコードテストをする
+コンパイルしてコードテストをする(Ctrl+Shift+B)
 .\abc_runner.bat
 
 次のコンテスト用のフォルダやファイルを作成する
