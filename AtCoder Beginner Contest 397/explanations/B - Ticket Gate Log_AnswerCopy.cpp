@@ -6,11 +6,8 @@ int main() {
   string s = "";
   cin >> s;
   int ans = 0;
-  char expect = 'i';
-  for(char c :s){
-    if(c != expect) ans++;
-  }
-
+  char target = 'i';
+  for(char c:S)
 
   cout << ans << endl;
   return 0;
