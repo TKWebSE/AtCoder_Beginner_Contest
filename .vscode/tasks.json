@@ -9,7 +9,12 @@
         "kind": "build",
         "isDefault": true
       },
-      "detail": "Run the latest solution by calling abc_runner.bat"
+      "detail": "Run the latest solution by calling abc_runner.bat",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,  // ターミナルにフォーカスを当てる
+        "panel": "shared"
+      }
     }
   ]
 }
