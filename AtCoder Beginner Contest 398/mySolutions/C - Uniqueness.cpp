@@ -12,6 +12,7 @@ int main() {
     int num;
     cin >> num;
     if(nums.count(num) == 0){
+      // 3つ目のやつがこっちに入ってしまう
       nums[num] = num;
     }else{
       nums.erase(num);
