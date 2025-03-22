@@ -7,6 +7,17 @@ int main() {
   int n = 0;
   cin >> n;
 
+  rep(i,n){
+    ans+= '-';
+  }
+  int i = n / 2;
+  if(n % 2 == 0){
+    i = i - 1;
+    ans[i] = '=';
+    ans[i+1] = '=';
+  }else{
+    ans[i] = '=';
+  }
 
   cout << ans << endl;
   return 0;
