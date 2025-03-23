@@ -14,11 +14,12 @@ void solve() {
     string ans;
     cin >> s;
 
-    rep(i,n){
-        if(!(a >= 'a' && a <= 'z')){
+    rep(i,s.size()){
+        if(!(s[i] >= 'a' && s[i] <= 'z')){
             ans += s[i];
         }
     }
+    cout << ans << endl;
     return;
 }
 
