@@ -13,15 +13,17 @@ int main() {
     cin >> num;
     if(nums.count(num) == 0){
       // 3つ目のやつがこっちに入ってしまう
-      nums[num] = num;
+      nums[num] = 1;
     }else{
-      nums.erase(num);
+      nums[num]++;
     }
   }
 
   // maxを求める
   for(const auto&  [key, value] :nums){
-    ans = max(ans,value);
+    if(value == 1){
+      ans = max(ans,key);
+    }
   }
 
   cout << ans << endl;
