@@ -11,8 +11,8 @@ int main() {
   rep(i,n){
     int num;
     cin >> num;
+    // 持っている人の番号も記録する
     if(nums.count(num) == 0){
-      // 3つ目のやつがこっちに入ってしまう
       nums[num] = 1;
     }else{
       nums[num]++;
