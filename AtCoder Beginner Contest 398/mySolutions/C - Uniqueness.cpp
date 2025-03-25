@@ -6,22 +6,23 @@ int main() {
   int ans = -1;
   int n = 0;
   cin >> n;
-  map<int,int> nums;
+  map<int,pair<int,int>>  nums;
   // オンリーワンの数字を持つ人だけの配列を作る
   rep(i,n){
     int num;
     cin >> num;
     // 持っている人の番号も記録する
     if(nums.count(num) == 0){
-      nums[num] = 1;
+      // first=登場人物、second=登場回数
+      nums[num] = <i,1>;
     }else{
-      nums[num]++;
+      nums[num].second++;
     }
   }
 
   // maxを求める
   for(const auto&  [key, value] :nums){
-    if(value == 1){
+    if(value.second == 1){
       ans = max(ans,key);
     }
   }
