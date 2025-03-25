@@ -13,8 +13,9 @@ int main() {
     cin >> num;
     // 持っている人の番号も記録する
     if(nums.count(num) == 0){
-      // first=登場人物、second=登場回数
-      nums[num] = <i,1>;
+      // key=持ってる数字 、value.first=登場人物の順番、value.second=番号の登場回数
+      nums[num].first = i+1;
+      nums[num].second = 1;
     }else{
       nums[num].second++;
     }
@@ -26,7 +27,9 @@ int main() {
       ans = max(ans,key);
     }
   }
-
+  if(ans != -1){
+    ans = nums[ans].first;
+  }
   cout << ans << endl;
   return 0;
 }
