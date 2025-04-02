@@ -10,6 +10,22 @@ using pii = pair<int, int>;
 
 void solve() {
     // 問題ごとの実装を書く部分
+    queue<int> q;
+    int n;
+    cin >> n;
+    rep(i, n) {
+        int a;
+        cin >> a;
+        if(a == 1){
+            cin >> a;
+            q.push(a);
+        }else{
+            a = q.front();
+            cout << a << endl;
+            q.pop();
+        }
+    }
+    return;
 }
 
 int main() {
