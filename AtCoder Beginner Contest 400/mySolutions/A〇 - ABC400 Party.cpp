@@ -10,6 +10,13 @@ using pii = pair<int, int>;
 
 void solve() {
     // 問題ごとの実装を書く部分
+    int ans = -1;
+    int a = 0;
+    cin >> a;
+    if(400 % a == 0){
+        ans = 400 / a;
+    }
+    cout << ans << endl;
 }
 
 int main() {
