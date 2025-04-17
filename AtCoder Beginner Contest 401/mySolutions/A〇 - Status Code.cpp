@@ -10,6 +10,14 @@ using pii = pair<int, int>;
 
 void solve() {
     // 問題ごとの実装を書く部分
+    int s;
+    cin >> s;
+    
+    if(s >= 200 && s <= 299){
+        cout << "Success" << endl;
+    }else{
+        cout << "Failure" << endl;
+    }
 }
 
 int main() {
