@@ -10,6 +10,16 @@ using pii = pair<int, int>;
 
 void solve() {
     // 問題ごとの実装を書く部分
+    string s;
+    string ans;
+    cin >> s;
+
+    rep(i,n){
+        if(!(a >= 'a' && a <= 'z')){
+            ans += s[i];
+        }
+    }
+    return;
 }
 
 int main() {
