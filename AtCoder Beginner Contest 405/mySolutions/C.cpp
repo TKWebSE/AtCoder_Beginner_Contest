@@ -10,8 +10,6 @@ using pii = pair<int, int>;
 
 void solve() {
     // 問題ごとの実装を書く部分
-    int n;
-    cin >> n;
 }
 
 int main() {
