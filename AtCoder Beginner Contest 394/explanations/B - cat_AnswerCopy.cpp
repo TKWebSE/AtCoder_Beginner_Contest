@@ -7,7 +7,7 @@ int main() {
   cin >> n;
   vector<string> s(n);
   rep(i,n) cin >> s[i];
-  sort(s.begin(),s.end(),{&}(string a,string b){
+  sort(s.begin(),s.end(),[&](string a,string b){
     return a.size() < b.size();
   });
   string ans;
